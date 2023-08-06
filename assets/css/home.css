@@ -1,0 +1,82 @@
+/* home.css */
+
+/* Body styles */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Page heading styles */
+  #page-heading {
+    color: #333;
+    font-size: 36px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Contact list styles */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+  .details {
+    flex: 1;
+  }
+  
+  .details p {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  
+  .delete-button {
+    text-align: right;
+  }
+  
+  .delete-button a {
+    color: #e74c3c;
+    font-size: 24px;
+  }
+  
+  /* Form styles */
+  form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  form input[type="text"],
+  form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  

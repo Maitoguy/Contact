@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <!-- To show variable here -->
+        <title>
+            <%= locals.title %>
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Our css should be below other styles so that we can override it  -->
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id="page-heading">
+            <i class="fa-sharp fa-regular fa-address-book"></i>
+            My Contact List</h1>
+        <div>
+            <ul>
+                <%for(let i of contact_list){%>
+                    <li>
+                        <div class="details">
+                            <p><%= i.name %></p>
+                            <p><%= i.phone%></p>
+                        </div>
+                        <div class="delete-button">
+                            <!-- <a href="delete-contact/<%= i.phone %>"> This is req.param and below is req.query-->
+                                <a href="/delete-contact/?id=<%=i._id %>&name=<%= i.name%>">
+                                <i class="fa-sharp fa-regular fa-rectangle-xmark"></i>
+                            </a>
+                        </div>
+                    </li>
+                <%}%>
+
+                <!-- <% for (var i =0; i< contact_list.length ; i++) { %> 
+
+                    <%= contact_list[i].name %>
+                  <%= contact_list[i].phone %>
+             <% } %> -->
+
+            </ul>
+        </div>
+
+        <form action="/create-contact" method="POST">
+            <!-- Value of name and phone number comes from name attribute -->
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="number" name="phone" placeholder="Enter Phone Number" required>
+            <button type="submit">Add</button>
+        </form>
+    </body>
+    <script type="text/javascript" src="/js/home.js"></script>
+</html>
